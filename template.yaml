@@ -9,5 +9,9 @@ steps:
   - script: echo step a!
     displayName: 'Step a Run a one-line script'
 - ${{ else }}:
-  - script: echo step b!
+  - script: |
+      echo step b!
+      echo $(parameters.experimentalTemplate)
+      echo ${{ parameters.experimentalTemplate }}
+      echo $[parameters.experimentalTemplate]
     displayName: 'Step b Run a one-line script'
