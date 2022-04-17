@@ -20,4 +20,4 @@ steps:
 
 - template: template.yaml
   parameters:
-    experimentalTemplate: eq(variables['Build.SourceBranch'], 'refs/heads/main')
+    experimentalTemplate: $[eq(variables['Build.SourceBranch'], 'refs/heads/main')]
