@@ -7,7 +7,7 @@ parameters:
 steps:
 - script: echo check condition
   condition: or(eq( ${{ parameters.experimentalTemplate }}, true),eq(${{ parameters.experimentalTemplate }}, True))
-- ${{ if or(eq(parameters['experimentalTemplate'], true),eq(parameters.experimentalTemplate, True)) }}:
+- ${{ if or(eq(parameters['experimentalTemplate'], true),eq(parameters.experimentalTemplate, 'True')) }}:
   - script: echo step a!
     displayName: 'Step a Run a one-line script'
 - ${{ else }}:
