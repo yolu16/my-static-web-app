@@ -19,5 +19,5 @@ steps:
   displayName: 'Run a multi-line script'
 
 - template: template.yaml
-  #parameters:
-  #  experimentalTemplate: $[and(true,true)]
+  parameters:
+    experimentalTemplate: ${{ and(true,true) }}
