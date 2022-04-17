@@ -2,7 +2,7 @@ parameters:
 - name: experimentalTemplate
   displayName: 'Use experimental build process?'
   type: object
-  default: false
+  default: and(true, true)
 
 steps:
 - script: echo check condition
