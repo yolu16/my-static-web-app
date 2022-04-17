@@ -20,4 +20,4 @@ steps:
 
 - template: template.yaml
   parameters:
-    experimentalTemplate: and(true,true)
+    experimentalTemplate: $[and(true,true)]
