@@ -12,6 +12,6 @@ steps:
   - script: |
       echo step b!
       echo macro $(parameters.experimentalTemplate)
-      echo compile ${{ parameters.experimentalTemplate }}
       echo runtime $[parameters.experimentalTemplate]
+      echo compile ${{ parameters.experimentalTemplate }}
     displayName: 'Step b Run a one-line script'
