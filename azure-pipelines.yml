@@ -20,4 +20,4 @@ steps:
 
 - template: template.yaml
   parameters:
-    experimentalTemplate: succeeded()
+    experimentalTemplate: true
