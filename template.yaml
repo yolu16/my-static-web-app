@@ -5,7 +5,9 @@ parameters:
   default: and(true, true)
 
 variables:
-  evaluated: $[ or(eq( parameters.experimentalTemplate, true),eq(parameters.experimentalTemplate, True)) ]
+- name: evaluated
+  value: $[ or(eq( parameters.experimentalTemplate, true),eq(parameters.experimentalTemplate, True)) ]
+
 steps:
 - script: echo eval ${{ variables.evaluated }}
 - script: echo check condition
