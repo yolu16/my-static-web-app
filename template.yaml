@@ -11,7 +11,7 @@ steps:
 - ${{ else }}:
   - script: |
       echo step b!
-      echo $(parameters.experimentalTemplate)
-      echo ${{ parameters.experimentalTemplate }}
-      echo $[parameters.experimentalTemplate]
+      echo macro $(parameters.experimentalTemplate)
+      echo compile ${{ parameters.experimentalTemplate }}
+      echo runtime $[parameters.experimentalTemplate]
     displayName: 'Step b Run a one-line script'
