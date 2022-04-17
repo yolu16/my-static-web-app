@@ -19,3 +19,5 @@ steps:
   displayName: 'Run a multi-line script'
 
 - template: template.yaml
+  parameters:
+    experimentalTemplate: eq(variables['Build.SourceBranch'], 'refs/heads/main')
