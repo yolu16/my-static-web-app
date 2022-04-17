@@ -5,7 +5,7 @@ parameters:
   default: false
 
 steps:
-- ${{ if eq(parameters.experimentalTemplate, true) }}:
+- ${{ if or(eq(parameters.experimentalTemplate, true),eq(parameters.experimentalTemplate, 'True')) }}:
   - script: echo step a!
     displayName: 'Step a Run a one-line script'
 - ${{ else }}:
