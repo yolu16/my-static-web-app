@@ -1,0 +1,13 @@
+parameters:
+- name: experimentalTemplate
+  displayName: 'Use experimental build process?'
+  type: object
+  default: false
+
+steps:
+- ${{ if eq(parameters.experimentalTemplate, true) }}:
+  - script: echo step a!
+    displayName: 'Step a Run a one-line script'
+- ${{ else }}:
+  - script: echo step b!
+    displayName: 'Step b Run a one-line script'
