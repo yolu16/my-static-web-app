@@ -23,4 +23,4 @@ steps:
 
 - template: template.yaml
   parameters:
-    experimentalTemplate: and(false, eq(variables['testCond'], true))
+    experimentalTemplate: and(false, true)
