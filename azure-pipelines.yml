@@ -8,6 +8,9 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
+  
+variables:
+  testCond: true
 
 steps:
 - script: echo Hello, world!
@@ -20,4 +23,4 @@ steps:
 
 - template: template.yaml
   parameters:
-    experimentalTemplate: and(true, succeeded())
+    experimentalTemplate: ${{ and(true, eq(variables['testCond'], true)) }}
